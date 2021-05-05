@@ -9,10 +9,18 @@
     {
         padding: 2%;
         margin: 0%;
-    }
 
+    }
+ .site-main .site-banner{
+  width:100%;
+ }
     .site-main .site-banner .site-title h1{
         font-size: 41px;
+        line-height: 40px;
+    }
+     .site-main .site-banner .site-title h3{
+
+        margin-top:20px;
     }
 
     .site-main .subscribe-us-area .subscribe form .input-textbox input{
@@ -22,6 +30,7 @@
     .site-main > .services-area .services{
         width: 13rem;
     }
+
 
 }
 
@@ -59,8 +68,19 @@
         width: 20rem;
         margin: 5%;
     }
+
+    #skills{
+      width:100%;
+    }
+
+    linear-gradient(90deg, #4458dc 0%, #854fee 100%)
 }
 
+@media only screen and (max-width: 999px){
+#aboutusimg{
+  display:none;
+}
+}
 
 
 /* if the viewport is equal to 1910px or less than that */
