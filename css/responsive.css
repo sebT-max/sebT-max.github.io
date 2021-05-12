@@ -73,16 +73,32 @@
       width:100%;
     }
 
-    linear-gradient(90deg, #4458dc 0%, #854fee 100%)
+
 }
 
 @media only screen and (max-width: 999px){
 #aboutusimg{
   display:none;
 }
+
 }
 
+@media only screen and (min-width: 991px){
+#aboutusimg{
+  display:none;
+}
 
+.header-fixed{
+  position:fixed;
+  z-index:3000;
+  background:white;
+  right:0;
+  left:0;
+  top:0;
+  height:132px;
+}
+
+}
 /* if the viewport is equal to 1910px or less than that */
 @media only screen and (max-width: 1910px){
     .header_area .main-menu .navbar{

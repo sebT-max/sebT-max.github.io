@@ -14,7 +14,14 @@ html, body{
     width: 100%;
     height: 100%;
 }
-
+/*.header-fixed{
+  position:fixed;
+  z-index:3000;
+  background:white;
+  right:0;
+  left:0;
+  top:0;
+}*/
 /* Global Classes */
 
 .title-text{

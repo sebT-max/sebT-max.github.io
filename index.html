@@ -29,7 +29,6 @@
 
     <!--  Responsive css file  -->
     <link rel="stylesheet" href="./css/responsive.css">
-    <script src="js/script.js"></script>
 
 </head>
 
@@ -38,10 +37,10 @@
 
     <!--  ======================= Start Header Area ============================== -->
 
-    <header class="header_area" style="width:100%;height:120px;background:white;position:fixed;z-index:3000;">
+    <header class="header_area header-fixed" id="header_area_id">
         <div class="main-menu">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img src="./img/logo.png" style="height:100px;alt="logo"></a>
+                <a class="navbar-brand" href="#"><img src="./img/logo.png" style="z-index:3000;background:white;height:100px;" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -78,7 +77,7 @@
     <!--  ======================= End Header Area ============================== -->
 
     <!--  ======================= Start Main Area ================================ -->
-    <main class="site-main" style="margin-top:0px;z-index:2000;">
+    <main class="site-main" style="z-index:2000;margin-top:0px;">
 
 
         <!--  ======================= Start Banner Area =======================  -->
@@ -418,29 +417,6 @@
     <!--  ======================= End Main Area ================================ -->
 
 
-
-<script>
-       let nav_offset_top = $('.header_area').height() + 50;
-
-    function navbarFixed() {
-        if ($('.header_area').length) {
-            $(window).scroll(function () {
-                let scroll = $(window).scrollTop();
-                if (scroll >= nav_offset_top) {
-                    $('.header_area .main-menu').addClass('navbar_fixed');
-                } else {
-                    $('.header_area .main-menu').removeClass('navbar_fixed');
-                }
-            })
-        }
-    }
-
-    navbarFixed();
-
-});
-</script>
-
-
     <footer class="footer-area">
         <div class="container">
             <div class="">
@@ -481,7 +457,7 @@
     <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
 
     <!--  custom js file  -->
-    <script src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 
 
 
