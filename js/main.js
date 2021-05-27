@@ -1,30 +1,39 @@
 
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
 
-    let $btns = $('.project-area .button-group button');
+//     let $btns = $('.project-area .button-group button');
 
 
-    $btns.click(function (e) {
+//     $btns.click(function (e) {
 
-        $('.project-area .button-group button').removeClass('active');
-        e.target.classList.add('active');
+//         $('.project-area .button-group button').removeClass('active');
+//         e.target.classList.add('active');
 
-        let selector = $(e.target).attr('data-filter');
-        $('.project-area .grid').isotope({
-            filter: selector
-        });
+//         let selector = $(e.target).attr('data-filter');
+//         $('.project-area .grid').isotope({
+//             filter: selector
+//         });
 
-        return false;
-    })
+//         return false;
+//     })
 
-    $('.project-area .button-group #btn1').trigger('click');
+//     $('.project-area .button-group #btn1').trigger('click');
 
-    $('.project-area .grid .test-popup-link').magnificPopup({
-        type: 'image',
-        gallery: { enabled: true }
-    });
+//     $('.project-area .grid .test-popup-link').magnificPopup({
+//         type: 'image',
+//         gallery: { enabled: true }
+//     });
 
 
-});
+// });
+
+
+const capitalize = (word) => {
+    const firstLetter = word[0].toUpperCase();
+    const restOfTheWord = word.substring(1).toLowerCase();
+    return firstLetter + restOfTheWord;
+};
+
+console.log(capitalize("bEnJaMiN"));
