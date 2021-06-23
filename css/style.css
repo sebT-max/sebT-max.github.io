@@ -8,6 +8,172 @@
 /* import global styling */
 @import url(./partials/_global.css);
 
+
+@charset "UTF-8";
+.navigation {
+  height: 70px;
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  text-transform:uppercase;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  color: #854fee;
+  text-transform: uppercase;
+
+
+  text-decoration: none;
+  margin-top:10px;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  color: black;
+
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  margin-top:10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
 html, body{
     margin: 0%;
     box-sizing: border-box;
@@ -26,6 +192,7 @@ html, body{
 
 .title-text{
     font: normal bold 50px/ 72px var(--roboto);
+
 }
 
 .text-uppercase{
@@ -171,10 +338,7 @@ button:hover
     background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
 }
 
-.site-main .site-banner .site-title h3{
-    padding-top: 35%;
-    font-weight: 500;
-}
+
 
 .site-main .site-banner .site-title h3::after{
     content: " ";
@@ -187,17 +351,14 @@ button:hover
 }
 
 .site-main .site-banner .site-title h1{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .site-main .site-banner .site-title h4{
     font-size: 1.5rem;
 }
 
-.site-main .site-banner .banner-image > img{
-    padding: 7rem 0;
-    width: 90rem;
-}
+
 
 
 
@@ -206,13 +367,14 @@ button:hover
 /* Start About Area */
 
 .site-main .about-area{
-    padding: 8rem 5rem;
+    padding: 2rem 0rem;
+    margin-top:70px;
 }
 
 .site-main .about-area .about-title h2 > span{
     display: block;
     font: normal bold 49px/ 60px var(--roboto);
-    letter-spacing: 21px;
+    letter-spacing: 15px;
 }
 
 .site-main .about-area .about-title .paragraph > p{
@@ -327,15 +489,13 @@ button:hover
     box-shadow: var(--box-shadow);
 }
 
-
-
 /* End Services Area */
 
 
 /* Project Area */
 
 .site-main .project-area{
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .site-main .project-area .button-group button{
@@ -350,13 +510,12 @@ button:hover
 }
 
 .site-main .project-area .grid .our-project > .title h4{
-    font: normal 700 25px/12px var(--roboto);
+    font: normal 700 25px/24px var(--roboto);
 }
 
 .site-main .project-area .grid .our-project .img a:hover img{
     filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
 }
-
 
 /* End Project Area */
 
@@ -364,7 +523,7 @@ button:hover
 /* About Me */
 
 .site-main .about-area .about-title p{
-    padding: 1rem 7rem;
+    padding: 1rem 0rem;
 }
 
 .site-main .about-area .client{
@@ -400,9 +559,6 @@ button:hover
     width: 12px;
     height: 12px;
 }
-
-
-
 /* End About Me */
 
 /* Subscribe me */
@@ -465,19 +621,3 @@ footer.footer-area .social a > i{
 footer.footer-area .social a:hover > i{
     color: var(--primary-color);
 }
-
-
-/* End Footer */
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete

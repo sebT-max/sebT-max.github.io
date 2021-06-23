@@ -28,6 +28,7 @@
 
     <!--  custom css file  -->
     <link rel="stylesheet" href="./css/style.css">
+     <link rel="stylesheet" href="./css/style.scss">
 
     <!--  Responsive css file  -->
     <link rel="stylesheet" href="./css/responsive.css">
@@ -37,47 +38,41 @@
 <body>
 
 
+
+
     <!--  ======================= Start Header Area ============================== -->
-
-    <header class="header_area header-fixed" id="header_area_id">
+ <header class="header_area header-fixed" id="header_area_id">
         <div class="main-menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img src="./img/logo.png" style="z-index:3000;background:white;height:100px;" alt="logo"></a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navHeaderCollapse"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+          <a class="navbar-brand" href="#"><img src="./img/logo.png" style="float:left;z-index:3000;background:white;height:100px;" alt="logo"></a>
 
-                </button>
+<nav>
 
-                <div class="collapse navbar-collapse navHeaderCollapse">
-                    <div class="mr-auto"></div>
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">about</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">skills</a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">contact</a>
-                        </li>
 
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+
+  <div class="nav-mobile">
+    <a id="nav-toggle" href="#!"><span></span></a>
+  </div>
+  <ul class="nav-list">
+    <li><a href="#!">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li>
+      <a href="#services">Services</a>
+      <!-- <ul class="nav-dropdown">
+        <li><a href="#!">Web Design</a></li>
+        <li><a href="#!">Web Development</a></li>
+        <li><a href="#!">Graphic Design</a></li>
+      </ul> -->
+    </li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</div>
+</header>
+
 
     <!--  ======================= End Header Area ============================== -->
 
@@ -88,8 +83,8 @@
         <!--  ======================= Start Banner Area =======================  -->
         <section class="site-banner">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 site-title">
+
+                    <div class="site-title">
                         <h3 class="title-text">Hey</h3>
                         <h1 class="title-text text-uppercase">I am Sébastien Ternest</h1>
                         <h4 class="title-text text-uppercase">Junior Web Developer</h4>
@@ -102,11 +97,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 banner-image">
-                      <br>
-                        <img src="./img/banner-image.png" alt="banner-img" class="img-fluid">
-                    </div>
-                </div>
+
+
             </div>
         </section>
         <!--  ======================= End Banner Area =======================  -->
@@ -114,22 +106,19 @@
         <!--  ========================= About Area ==========================  -->
 <div id="about">
 </div>
-<br><br><br><br>
         <section class="about-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="about-image">
-                            <img src="./img/about-us.png" alt="About us" id="aboutusimg" class="img-fluid">
-                        </div>
+                      <div class="banner-image">
+                      <br>
+                        <img src="./img/banner-image.png" alt="banner-img" class="img-fluid">
                     </div>
-                    <div class="col-lg-6 col-md-12 about-title">
-                        <h2 class="text-uppercase pt-5">
+
+                    <div class="about-title">
+                        <h2 class="text-uppercase">
                             <span>Let me</span>
                             <span>introduce</span>
                             <span>myself</span>
                         </h2>
-                        <div class="paragraph py-4 w-75">
+                        <div class="paragraph">
 
                             <p class="para">
                               Passionate about food and wine,
@@ -152,8 +141,7 @@
                         </div>
                         <a href="img/cv.pdf" class="btn button primary-button text-uppercase">Download cv</a>
                     </div>
-                </div>
-            </div>
+
         </section>
 
         <!--  ========================= End About Area ==========================  -->
@@ -161,10 +149,10 @@
         <!--  ======================== Certificate Area ==============================  -->
     <section class="certification mt" style="margin-top:80px">
 
-    <div class="text-center container">
+    <div class="text-center">
 <h1>Certification</h1>
 <br>
-        <img src="img/cert.png" style="width:50%;">
+        <img src="img/cert.png">
 </div>
 </section>
         <!--  ======================== End Certificate Area ==============================  -->
@@ -386,19 +374,16 @@
 
         <!--  ======================== About Me Area ==============================  -->
 <br><br>
-        <section class="about-area" id="skills">
+        <section id="skills">
             <div class="container">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <div class="about-title">
+                <div class="text-center">
                             <h1 class="text-uppercase title-h1">SKILLS</h1>
-                            <p class="para">
-                            </p>
-                            <div class="contaier">
+
+                            <div class="contaier" style="margin:0 auto">
                              <img src="./img/skills.png" alt="banner-img" id="skills" class="img-fluid">
                              </div>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
         </section>
@@ -484,7 +469,31 @@
     <!--  custom js file  -->
     <script type="text/javascript" src="./js/main.js"></script>
 
-
+<script>
+  (function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+</script>
 
 </body>
 
