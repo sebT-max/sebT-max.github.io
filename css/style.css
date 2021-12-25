@@ -38,15 +38,18 @@
 nav {
   float: right;
 }
+
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 nav ul li {
   float: left;
   position: relative;
 }
+
 nav ul li a,
 nav ul li a:visited {
   display: block;
@@ -96,7 +99,13 @@ nav ul li ul li a {
   width: 70px;
 }
 
+
+
 @media only screen and (max-width: 798px) {
+
+
+
+
   .nav-mobile {
     display: block;
   }
@@ -111,10 +120,12 @@ nav ul li ul li a {
   nav ul li {
     float: none;
   }
+
   nav ul li a {
     padding: 15px;
     line-height: 20px;
   }
+
   nav ul li ul li a {
     padding-left: 30px;
   }
@@ -123,11 +134,20 @@ nav ul li ul li a {
     position: static;
   }
 }
+
+
+/*   MEDIA SCREEN MIN 799 - BEGIN  */
+
 @media screen and (min-width: 799px) {
   .nav-list {
     display: block !important;
   }
 }
+
+/*   MEDIA SCREEN MIN 799 - END    */
+
+
+
 #nav-toggle {
   position: absolute;
   left: 18px;
@@ -135,6 +155,7 @@ nav ul li ul li a {
   cursor: pointer;
   padding: 10px 35px 16px 0px;
 }
+
 #nav-toggle span,
 #nav-toggle span:before,
 #nav-toggle span:after {
@@ -148,21 +169,27 @@ nav ul li ul li a {
   content: "";
   transition: all 300ms ease-in-out;
 }
+
 #nav-toggle span:before {
   top: -10px;
 }
+
 #nav-toggle span:after {
   bottom: -10px;
 }
+
 #nav-toggle.active span {
   background-color: transparent;
 }
+
 #nav-toggle.active span:before, #nav-toggle.active span:after {
   top: 0;
 }
+
 #nav-toggle.active span:before {
   transform: rotate(45deg);
 }
+
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
 }
@@ -192,7 +219,6 @@ html, body{
 
 .title-text{
     font: normal bold 50px/ 72px var(--roboto);
-
 }
 
 .text-uppercase{
@@ -338,8 +364,6 @@ button:hover
     background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
 }
 
-
-
 .site-main .site-banner .site-title h3::after{
     content: " ";
     height: 2px;
@@ -357,10 +381,6 @@ button:hover
 .site-main .site-banner .site-title h4{
     font-size: 1.5rem;
 }
-
-
-
-
 
 /* End Banner Area */
 
